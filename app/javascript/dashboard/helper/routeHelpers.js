@@ -32,7 +32,7 @@ export const validateLoggedInRoutes = (to, user, roleWiseRoutes) => {
   // If current account is missing, either user does not have
   // access to the account or the account is deleted, return to login screen
   if (!currentAccount) {
-    return `app/login`;
+    return `app/auth/signup`;
   }
 
   const isCurrentAccountActive = currentAccount.status === 'active';

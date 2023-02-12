@@ -18,7 +18,7 @@
             </h2>
           </div>
           <signup-form />
-          <div class="auth-screen--footer">
+          <!-- <div class="auth-screen--footer">
             <span>{{ $t('REGISTER.HAVE_AN_ACCOUNT') }}</span>
             <router-link to="/app/login">
               {{
@@ -28,7 +28,7 @@
                 )
               }}
             </router-link>
-          </div>
+          </div> -->
         </div>
       </div>
       <testimonials
@@ -52,7 +52,7 @@ import Spinner from 'shared/components/Spinner.vue';
 
 export default {
   components: {
-    SignupForm,
+    // SignupForm,
     Spinner,
     Testimonials,
   },

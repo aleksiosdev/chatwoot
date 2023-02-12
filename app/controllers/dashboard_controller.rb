@@ -3,7 +3,7 @@ class DashboardController < ActionController::Base
 
   before_action :set_global_config
   around_action :switch_locale
-  before_action :ensure_installation_onboarding, only: [:index]
+  # before_action :ensure_installation_onboarding, only: [:index]
   before_action :render_hc_if_custom_domain, only: [:index]
 
   layout 'vueapp'

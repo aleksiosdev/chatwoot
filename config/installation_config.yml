@@ -52,7 +52,7 @@
   value:
   locked: false
 - name: LOGOUT_REDIRECT_LINK
-  value: /app/login
+  value: /app/auth/signup
   locked: false
 - name: DISABLE_USER_PROFILE_UPDATE
   value: false
