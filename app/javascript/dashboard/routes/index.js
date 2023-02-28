@@ -135,7 +135,7 @@ export const initalizeRouter = () => {
         if (isLoggedIn) {
           return next(frontendURL(`accounts/${user.account_id}/dashboard`));
         }
-        return next('/app/login');
+        return next('/app/auth/signup');
       }
 
       return validateRouteAccess(to, from, next, store);
