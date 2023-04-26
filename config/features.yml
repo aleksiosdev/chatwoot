@@ -16,7 +16,7 @@
 - name: help_center
   enabled: false
 - name: agent_bots
-  enabled: false
+  enabled: true
 - name: macros
   enabled: true
 - name: agent_management
@@ -38,7 +38,7 @@
 - name: voice_recorder
   enabled: false
 - name: mobile_v2
-  enabled: false
+  enabled: true
 - name: channel_website
   enabled: true
 - name: campaigns
