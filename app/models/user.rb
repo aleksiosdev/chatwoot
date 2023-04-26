@@ -99,6 +99,7 @@ class User < ApplicationRecord
   has_many :macros, foreign_key: 'created_by_id'
   before_validation :set_password_and_uid, on: :create
   after_destroy :remove_macros
+  after_create :confirm_your_type_user_without_confirmation_email
 
   scope :order_by_full_name, -> { order('lower(name) ASC') }
 
@@ -207,4 +208,11 @@ class User < ApplicationRecord
   def remove_macros
     macros.personal.destroy_all
   end
+
+  def confirm_your_type_user_without_confirmation_email
+    # check your condition here and process the following
+    self.skip_confirmation!
+    self.confirm
+    # condition may end here
+end
 end

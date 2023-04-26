@@ -127,7 +127,7 @@ export const SDK_CSS = `
 }
 
 .woot-widget-bubble:hover {
-  background: #1f93ff;
+  background: #941FFF;;
   box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
 }
 
