@@ -52,7 +52,7 @@ import Spinner from 'shared/components/Spinner.vue';
 
 export default {
   components: {
-    // SignupForm,
+    SignupForm,
     Spinner,
     Testimonials,
   },

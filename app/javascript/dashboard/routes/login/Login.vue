@@ -16,7 +16,7 @@
       <div v-if="!email" class="small-12 medium-4 column">
         <form class="login-box column align-self-top" @submit.prevent="login()">
           <div class="column log-in-form">
-            <!-- <label :class="{ error: $v.credentials.email.$error }">
+            <label :class="{ error: $v.credentials.email.$error }">
               {{ $t('LOGIN.EMAIL.LABEL') }}
               <input
                 v-model.trim="credentials.email"
@@ -25,7 +25,7 @@
                 :placeholder="$t('LOGIN.EMAIL.PLACEHOLDER')"
                 @input="$v.credentials.email.$touch"
               />
-            </label> -->
+            </label>
             <label :class="{ error: $v.credentials.password.$error }">
               {{ $t('LOGIN.PASSWORD.LABEL') }}
               <input
@@ -128,7 +128,7 @@ export default {
       bus.$emit('newToastMessage', this.loginApi.message);
     },
     showSignupLink() {
-      return window.chatwootConfig.signupEnabled === 'true';
+      return true;
     },
     login() {
       this.loginApi.showLoading = true;
