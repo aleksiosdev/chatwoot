@@ -22,7 +22,7 @@
         :error="$v.credentials.email.$error ? $t('REGISTER.EMAIL.ERROR') : ''"
         @blur="$v.credentials.email.$touch"
       />
-      <auth-input
+      <!-- <auth-input
         v-model="credentials.accountName"
         :class="{ error: $v.credentials.accountName.$error }"
         icon-name="building-bank"
@@ -34,7 +34,7 @@
             : ''
         "
         @blur="$v.credentials.accountName.$touch"
-      />
+      /> -->
       <auth-input
         v-model.trim="credentials.password"
         type="password"
@@ -46,7 +46,7 @@
         @blur="$v.credentials.password.$touch"
       />
     </div>
-    <div v-if="globalConfig.hCaptchaSiteKey" class="h-captcha--box">
+    <!-- <div v-if="globalConfig.hCaptchaSiteKey" class="h-captcha--box">
       <vue-hcaptcha
         ref="hCaptcha"
         :class="{ error: !hasAValidCaptcha && didCaptchaReset }"
@@ -56,7 +56,7 @@
       <span v-if="!hasAValidCaptcha && didCaptchaReset" class="captcha-error">
         {{ $t('SET_NEW_PASSWORD.CAPTCHA.ERROR') }}
       </span>
-    </div>
+    </div> -->
     <auth-submit-button
       :label="$t('REGISTER.SUBMIT')"
       :is-disabled="isSignupInProgress || !hasAValidCaptcha"
